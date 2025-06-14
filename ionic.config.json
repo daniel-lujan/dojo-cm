@@ -1,0 +1,7 @@
+{
+  "name": "agenda-contactos",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "react-vite"
+}

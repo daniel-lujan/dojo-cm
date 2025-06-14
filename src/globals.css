@@ -1,0 +1,84 @@
+@import url("https://fonts.googleapis.com/css2?family=Londrina+Solid:wght@100;300;400;900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import "tailwindcss";
+
+@theme {
+  --font-primary: "Poppins", sans-serif;
+  --font-secondary: "Londrina Solid", cursive;
+  --color-primary: #7819f3;
+  --color-primary-50: #f5f1ff;
+  --color-primary-100: #ece6ff;
+  --color-primary-200: #dbd0ff;
+  --color-primary-300: #c2abff;
+  --color-primary-400: #a57bff;
+  --color-primary-500: #8b46ff;
+  --color-primary-600: #7f20ff;
+  --color-primary-700: #7819f3;
+  --color-primary-800: #5f0ccb;
+  --color-primary-900: #4f0ca6;
+  --color-primary-950: #2f0471;
+  --color-accent: #ffcc00;
+  --color-accent-50: #fffee7;
+  --color-accent-100: #fffec1;
+  --color-accent-200: #fff886;
+  --color-accent-300: #ffec41;
+  --color-accent-400: #ffdb0d;
+  --color-accent-500: #ffcc00;
+  --color-accent-600: #d19500;
+  --color-accent-700: #a66a02;
+  --color-accent-800: #89530a;
+  --color-accent-900: #74430f;
+  --color-accent-950: #442304;
+  --color-danger-50: #fef2f3;
+  --color-danger: #ed2e3e;
+  --color-danger-100: #fee2e4;
+  --color-danger-200: #fecace;
+  --color-danger-300: #fca5ac;
+  --color-danger-400: #f8717c;
+  --color-danger-500: #ed2e3e;
+  --color-danger-600: #dc2635;
+  --color-danger-700: #b91c29;
+  --color-danger-800: #991b26;
+  --color-danger-900: #7f1d25;
+  --color-danger-950: #450a0f;
+  --color-electric-green: #00ff2f;
+  --color-fire-red: #ff4000;
+}
+
+:root {
+  --ion-background: #f5f4;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  color: white;
+}
+
+* {
+  @apply box-border;
+}
+
+svg {
+  flex-shrink: 0;
+}
+
+hr {
+  @apply border-0 border-t border-solid border-gray-300 my-4;
+}
+
+@layer components {
+  .ion-page {
+    @apply bg-gray-50;
+  }
+
+  .contact-card {
+    @apply bg-white rounded-lg shadow-sm border border-gray-200 p-4 mb-3;
+  }
+
+  .form-error {
+    @apply text-red-500 text-sm mt-1;
+  }
+}
+
+.ion-modal {
+  --border-radius: 16px;
+}
