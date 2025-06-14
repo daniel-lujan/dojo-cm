@@ -23,16 +23,20 @@ const Home: React.FC = () => {
 
   const handleDeleteContact = async (id: string) => {
     // TODO: Implementar confirmación antes de eliminar contacto con componente nativo (modal o alert)
-    await deleteContact(id);
+    try {
+      await deleteContact(id);
+      // TODO: Mostrar toast nativo de éxito
+    } catch {
+      // TODO: Mostrar toast nativo de error
+      console.error("Error deleting contact");
+    }
   };
 
   const handleAddContact = async (contactForm: ContactForm) => {
     try {
       await addContact(contactForm);
       setIsModalOpen(false);
-      // TODO: Mostrar toast nativo de éxito
     } catch (error) {
-      // TODO: Mostrar toast nativo de error
       console.error("Error adding contact:", error);
     }
   };
